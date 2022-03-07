@@ -1,8 +1,11 @@
-<?php 
+<?php
+//Other currency to TRY php driver code
+
+//TURKISH Central Bank Currency Api connection
 $connect = simplexml_load_file('http://www.tcmb.gov.tr/kurlar/today.xml');
- 
 $takenCurrency=$connect->Currency;
 
+//Decleration of currency choice and amount of the money
 if(isset($_POST["chosenCurrency"]) && isset($_POST["amountTry"]))
 {
 $chosenCurrency=$_POST["chosenCurrency"];
@@ -10,6 +13,7 @@ $amountTry=$_POST["amountTry"];
 
 }
 
+//Handling Currency Convension
 switch ($chosenCurrency) {
     case "0":
         $result =  $amountTry." Turkish Lira = American Dollar: ".($amountTry/$takenCurrency[0]->ForexSelling);
@@ -39,6 +43,7 @@ switch ($chosenCurrency) {
         $result =  "You have chosen invalid option. Please report it or try again";
   }
 ?>
+<!-- Result Page-->
   <!DOCTYPE html>
 <html lang="en">
 <head>
