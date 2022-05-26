@@ -60,7 +60,9 @@ switch ($chosenCurrency) {
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-3 text-center">
-            <div class="position-absolute top-50 start-50 translate-middle"><p class="text-danger" style="font-family: 'Syne Mono', monospace; text-align:justify; font-size:30px" ><?php echo $result ; ?></p></div>
+            <div class="position-absolute top-50 start-50 translate-middle"><p class="text-danger" style="font-family: 'Syne Mono', monospace; text-align:justify; font-size:30px" ><?php echo $result ; ?></p>
+            <a href="../../index.html" style="text-decoration:none; color:white;" ><button class="btn btn-danger"> Go to Main Page</button></a>
+        </div>
             </div>
         </div>
     </div>
